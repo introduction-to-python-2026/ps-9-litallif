@@ -26,7 +26,9 @@ accuracy = accuracy_score(y_val, y_pred)
 print("Accuracy:", accuracy)
 import joblib
 import yaml
+import joblib
 
+joblib.dump(model, "parkinson_model.joblib")
 config_data = {
     "selected_features": ["MDVP:Jitter(%)", "HNR"],  
     "path": "parkinson_model.joblib"               
